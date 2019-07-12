@@ -31,7 +31,7 @@ due to buffer size constraints, exploitation cannot be done in one shot , so it 
 
 this is a already working exploit , unfortunally it has that hardcoded stuff , some more thinking has to be made because , generating null free shellcode for connect back ip 10.0.0.1 takes different size than for example 192.168.1.1 , and size is a constraint here.
 
-one final remark , this one uses some rop gadgets to bypass aslr , and libc location changes between models and firmware versions.  if a close look is taken on ex extg789vacv2.py , you will see the comments after the registers overwrites. are the relative offsets regarding /lib/libc.so.0 location ... so how to get that reference base address from libc , i did not check if this information was dumped to telnet console , it might , but with serial console if you launch the reference crash test udp.py it will print crash dump report with libc address , next you will have to adapt exploiy.py , better look at extg789vacv2.py as it has the offset math comment already , would like to automate this also .... 
+one final remark , this one uses some rop gadgets to bypass aslr , and libc location changes between models and firmware versions.  if a close look is taken on ex extg789vacv2.py , you will see the offset deltacomment after the registers overwrites. are the relative offsets regarding /lib/libc.so.0 location ... so how to get that reference base address from libc , i did not check if this information was dumped to telnet console , it might , but with serial console if you launch the reference crash test udp.py it will print on the serial console of the device the crash dump report with libc address [ insert example here ] , next you will have to adapt exploiy.py... or better look at extg789vacv2.py as it has the offset math comment already , ir can be automated with console args parameters , if time comes by  .... 
 
 so ... what has to be done : 
 
@@ -48,7 +48,7 @@ so ... what has to be done :
  be wise , be responsible. 
 
  Cheers,
-  
+
  keep on rolling :) 
 
 

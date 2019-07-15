@@ -5,7 +5,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--name', help='output name of stage1 shellcode',required=True)
 
 args = parser.parse_args()
-intf = args.name
+name = args.name
 
 
 context.clear()

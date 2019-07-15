@@ -1,6 +1,13 @@
 ## Welcome to rev1900 R&D
 
 
+Pre-requesites: 
+
+for shcode generation : 
+        pip install pwntools
+        apt-get install crossbuild-essential-mips
+
+
 Intro : 
 
 first things first , since this dump started somewhat with a bunch of mysteriously files , let me explain what this is : 
@@ -46,6 +53,12 @@ so ... what has to be done :
 
 
  be wise , be responsible. 
+
+
+
+
+
+
 
  Cheers,
 

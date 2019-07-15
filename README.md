@@ -1,7 +1,7 @@
 ## Welcome to rev1900 R&D
 
 
-Pre-requesites: 
+Prerequesites: 
 
 for shcode generation : 
 

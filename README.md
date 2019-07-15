@@ -4,7 +4,9 @@
 Pre-requesites: 
 
 for shcode generation : 
+
         pip install pwntools
+
         apt-get install crossbuild-essential-mips
 
 
